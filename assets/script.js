@@ -22,12 +22,12 @@
 // app.listen(PORT, () => console.log(`listening on ${PORT}`));
 
 
-async function getGame() {
+async function getGame(name) {
 
-  const url = `https://www.freetogame.com/api/games`;
+  const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
   const res = await axios.get(url);
-  console.log(res);
+  console.log(res.data);
   // const countryData = res.data;
 }
 
-getGame();
+getGame("madden");
