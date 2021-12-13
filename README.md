@@ -50,7 +50,8 @@ deck: "Various football players are already duking it out for the rights to be n
 
 - Add a hamburger style menu for phone screens
 - Add a carousel for game scrolling
-- Expand game informaiton upon clic
+- Expand game informaiton upon click
+- Add suggestions section
 ## Project Schedule
 
 |  Day | Deliverable | Status
@@ -65,8 +66,7 @@ deck: "Various football players are already duking it out for the rights to be n
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
-
+![Priority Matrix](https://res.cloudinary.com/dnv6i44dp/image/upload/v1639368115/Priority_Matrix_toqoqy.png)
 ## Timeframes
 
 Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
