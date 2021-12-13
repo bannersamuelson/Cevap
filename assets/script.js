@@ -30,4 +30,4 @@ async function getGame(name) {
   // const countryData = res.data;
 }
 
-getGame("madden");
+getGame("grand");
