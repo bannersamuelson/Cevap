@@ -8,6 +8,7 @@
   <script defer src="./assets/script.js"></script>
   <link rel="stylesheet" href="./assets/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Cevap Game Finder</title>
 </head>
 
@@ -20,13 +21,19 @@
       <ul id="navId">
         <li id="library"><a href="#">Library</a></li>
         <li id="favorites"><a href="#">My favorites</a></li>
-        <li><input type="text" id="gameFinder" placeholder="Search games.."><button>enter</button></li>
+        <li>
+          <form class="example" action="action_page.php">
+            <input type="text" placeholder="Search.." name="search" id="gameFinder">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </li>
       </ul>
     </nav>
   </div>
-  <div class="gameResults"></div>
+  <div class="gameInfo">
+    <div class="gameResults"></div>
   </div>
-  </div>
+
 </body>
 
 </html>

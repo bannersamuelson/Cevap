@@ -21,6 +21,7 @@
 // const PORT = process.env.PORT || 3000;
 // app.listen(PORT, () => console.log(`listening on ${PORT}`));
 const gameResults = document.querySelector(".gameResults");
+const gameInfo = document.querySelector(".gameInfo");
 
 async function getGame(name) {
   try {
@@ -50,13 +51,14 @@ function renderList(gameData) {
     gameResults.appendChild(gamePhoto);
 
     const gameTitle = document.createElement("h2");
+    // h2.classList.add(".sub");
     gameTitle.innerText = game.name;
     gameResults.appendChild(gameTitle);
+    gameTitle.setAttribute("id", game.id)
 
   });
 }
-
-getGame("madden");
+getGame("grand");
 
 // function displayErrorMessage() {
 //   console.log("error");
@@ -65,4 +67,3 @@ getGame("madden");
 function showGamedata(data) {
   console.log(data);
 }
-
