@@ -36,6 +36,8 @@ deck: "Various football players are already duking it out for the rights to be n
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
+[Link to wireframe on Figma](https://www.figma.com/file/8T49Yi7EM6A59cnXE8Ig9g/Wireframe-p1?node-id=0%3A1)
+
 ### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
