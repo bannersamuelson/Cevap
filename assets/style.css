@@ -4,6 +4,18 @@ body {
   
 }
 
-img {
+nav {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
 
+ul {
+  display: flex;
+  list-style: none;
+  min-width: 30vw;
+  align-content: center;
+  justify-content: space-between;
 }
