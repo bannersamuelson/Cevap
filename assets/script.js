@@ -21,6 +21,7 @@
 // const PORT = process.env.PORT || 3000;
 // app.listen(PORT, () => console.log(`listening on ${PORT}`));
 const gameResults = document.querySelector(".gameResults");
+const gameInfo = document.querySelector(".gameInfo");
 
 async function getGame(name) {
   try {
@@ -55,7 +56,7 @@ function renderList(gameData) {
   });
 }
 
-getGame("fifa");
+getGame("madden");
 
 // function displayErrorMessage() {
 //   console.log("error");
