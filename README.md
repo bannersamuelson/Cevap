@@ -8,7 +8,7 @@ I am going to create a website application that will be able to access video gam
 Cevap - ("game" in Turkish)
 ## Project Description
 
- The app project will be a fast video game lookup that has helpful information without needing to do multiple searches. 
+ The app project will be a lookup machine for fast video game information without needing to do multiple searches. 
 
 There will be included in the site with relevant games, suggestions, categories.
 
@@ -32,16 +32,16 @@ api_detail_url: "https://www.giantbomb.com/api/game/3030-49600/"
 date_added: "2015-05-05 14:27:54"
 date_last_updated: "2018-02-08 08:09:52"
 deck: "Various football players are already duking it out for the rights to be named the cover athlete for this year's Madden release." . . .
-## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+<h2>Wireframes</h2>
 
 [Link to wireframe on Figma](https://www.figma.com/file/8T49Yi7EM6A59cnXE8Ig9g/Wireframe-p1?node-id=0%3A1)
 
-### MVP/PostMVP
+### MVP
 
-- Be able to search a databse for games
-- A list of games will populate based on the search
+- Be able to search a database for games
+- A list of games will populate based on the search including title/release date and img
+- add a "learn more function"
 - A "my games" will be added for you to save favorite games
 - A "library" tab will revert back to the previous search
 - phone screens will be functional.
@@ -50,19 +50,15 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 - Add a hamburger style menu for phone screens
 - Add a carousel for game scrolling
-- Expand game informaiton upon click
+- Expand game informaiton upon clic
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Dec 13| Project Approval | Incomplete
+|Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Copmlete
+|Dec 13| Project Approval/ create webppage/phone structure | Incomplete
 |Dec 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Dec 14| Pseudocode / actual code | Incomplete
+|Dec 14| Pseudocode / actual codeCore| Incomplete | Incomplete
 |Dec 15| Initial Clickable Model  | Incomplete
 |Dec 16| MVP | Incomplete
 |Dec 17| Presentations | Incomplete
