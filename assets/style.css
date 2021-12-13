@@ -5,32 +5,42 @@ body {
   
 }
 
+* {
+  box-sizing: border-box;
+}
+
 nav {
   height: 10vh;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
   justify-content: center;
 }
 
+
 #navId {
   display: flex;
   list-style: none;
   min-width: 30vw;
-  align-content: center;
-  justify-content: space-between;
   font-size: 30px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navBar a {
   text-decoration: none;
-  padding: 25px 25px;
+  padding: 15px 15px 2px 15px;
   color: #595959; 
+  /* border-radius: 0px; */
+  
 }
 
 .navBar a:hover {
-  background-color: #595959;
-  color: #f9f9f8;
+  /* background-color: #595959;
+  color: #f9f9f8; */
+  border-bottom: 1px solid black;
+  
 }
 
 .navBar a.active {
@@ -38,33 +48,32 @@ nav {
   color: #f9f9f8;
 }
 
-#gameFinder {
-  width: 100%;
-   padding: 10px;
-   text-align: center;
-   font-size: 20px;
-   font-weight: 500;
-   background-color: #f9f9f8;
-   border-radius: 50px;
-  border: 2px solid #9d9d9d;;
-}
 
-.inputContainer i {
-  position: absolute;
+  
+.Flatsearch {
+  align-items: center;
+  background: #f9f9f8 none repeat scroll 0 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  padding: 15px;
+  /* transition: all 0.5s ease 0s; */
 }
-.inputContainer {
-  width: 100%;
-  margin-bottom: 10px;
+.Flatsearch:hover, .Flatsearch:focus {
+background: blue;
 }
-
-  .icon {
-    /* padding: 15px; */
-    color: #595959;
-    /* width: 70px; */
-    /* text-align: left; */
-    background-color: #f9f9f8;
-    border: none;
- }
+.Flatsearch button,
+.Flatsearch input {
+-webkit-appearance: none;
+   -moz-appearance: none;
+        appearance: none;
+background: transparent;
+border: 0;
+color: #595959;
+font: inherit;
+outline: 0;
+}
 
 .gameResults {
   width: 50%;
