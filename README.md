@@ -40,21 +40,17 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
-#### MVP 
-*These are examples only. Replace with your own MVP features.*
-
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Be able to search a databse for games
+- A list of games will populate based on the search
+- A "my games" will be added for you to save favorite games
+- A "library" tab will revert back to the previous search
+- phone screens will be functional.
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
-
+- Add a hamburger style menu for phone screens
+- Add a carousel for game scrolling
+- Expand game informaiton upon click
 ## Project Schedule
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
