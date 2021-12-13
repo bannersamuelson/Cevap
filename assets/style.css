@@ -18,4 +18,34 @@ ul {
   min-width: 30vw;
   align-content: center;
   justify-content: space-between;
+  font-size: 20px;
+  
+}
+
+.navBar a {
+  text-decoration: none;
+  padding: 14px 16px;
+  color: #595959; 
+}
+
+.navBar a:hover {
+  background-color: #595959;
+  color: #f9f9f8;
+}
+
+.navBar a.active {
+  background-color: #595959;
+  color: #f9f9f8;
+}
+
+.gameResults {
+  
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+  border: 20px solid #f9f9f8 ;
+
 }
