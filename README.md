@@ -38,6 +38,11 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 [Link to wireframe on Figma](https://www.figma.com/file/8T49Yi7EM6A59cnXE8Ig9g/Wireframe-p1?node-id=0%3A1)
 
+Wire frame links:
+![wireframe1](https://ibb.co/grpPL7s
+https://ibb.co/s5ZNNDC
+https://ibb.co/cDdTZ8c
+https://ibb.co/qdKG0Sj) "wire frames"
 ### MVP/PostMVP
 
 - Be able to search a databse for games
