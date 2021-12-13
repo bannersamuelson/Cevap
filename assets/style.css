@@ -1,6 +1,8 @@
 body {
   background: #f9f9f8;
   color: #595959;
+  font-family: 'Poiret One', cursive;
+font-family: 'Roboto', sans-serif;
   /* height: auto; */
   
 }
@@ -30,47 +32,51 @@ nav {
 
 .navBar a {
   text-decoration: none;
-  padding: 15px 15px 2px 15px;
+  /* padding: 10px 20px; */
   color: #595959; 
+  border: solid 10px #f9f9f8;
   /* border-radius: 0px; */
   
 }
 
-.navBar a:hover {
-  /* background-color: #595959;
-  color: #f9f9f8; */
-  border-bottom: 1px solid black;
-  
+.navBar a:hover, a:focus{
+
+  border-bottom: 1px solid #595959;
 }
+
+/* .navbar a:focus {
+
+} */
 
 .navBar a.active {
   background-color: #595959;
   color: #f9f9f8;
 }
 
-
-  
-.Flatsearch {
+.searchBar {
   align-items: center;
-  background: #f9f9f8 none repeat scroll 0 0;
-  border-radius: 10px;
+  background: #595959 none repeat scroll 0 0;
+  border-radius: 25px;
   display: flex;
   justify-content: space-between;
   margin: 12px 0;
   padding: 15px;
-  /* transition: all 0.5s ease 0s; */
 }
-.Flatsearch:hover, .Flatsearch:focus {
-background: blue;
+
+.searchBar:hover, .searchBar:focus {
+  cursor: pointer;
+  background: #f9f9f8;
 }
-.Flatsearch button,
-.Flatsearch input {
+
+
+.searchBar button,
+.searchBar input {
 -webkit-appearance: none;
    -moz-appearance: none;
         appearance: none;
 background: transparent;
 border: 0;
-color: #595959;
+color: inherit;
 font: inherit;
 outline: 0;
 }
