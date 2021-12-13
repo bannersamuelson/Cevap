@@ -5,7 +5,7 @@ I am going to create a website application that will be able to access video gam
 ## Project Name
 
 
-Cevap Game Database - ("game" in Turkish)
+Cevap Game Finder - (Cevap = "game" in Turkish)
 ## Project Description
 
  The app project will be a lookup machine for fast video game information without needing to do multiple searches. 

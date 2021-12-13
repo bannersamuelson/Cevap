@@ -20,14 +20,48 @@
 
 // const PORT = process.env.PORT || 3000;
 // app.listen(PORT, () => console.log(`listening on ${PORT}`));
-
+const gameResults = document.querySelector(".gameResults");
 
 async function getGame(name) {
+  try {
+    const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    const res = await axios.get(url);
+    const gameData = res.data.results;
+    console.log(gameData);
+    renderList(gameData);
+    // gameData.forEach((gameObj) => {
+    //   showGameData(gameObj);
+    // });
+  } catch (error) {
+    console.log("error");
+  }
 
-  const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
-  const res = await axios.get(url);
-  console.log(res.data);
-  // const countryData = res.data;
 }
 
-getGame("grand");
+
+
+function renderList(gameData) {
+  gameData.forEach((game) => {
+    console.log(game.name);
+
+    const gamePhoto = document.createElement("img")
+    gamePhoto.src = game.image.screen_url;
+    gamePhoto.alt = `Post of ${game.name}`;
+    gameResults.appendChild(gamePhoto);
+
+    const gameTitle = document.createElement("h2");
+    gameTitle.innerText = game.name;
+    gameResults.appendChild(gameTitle);
+  });
+}
+
+getGame("fifa");
+
+// function displayErrorMessage() {
+//   console.log("error");
+// }
+
+function showGamedata(data) {
+  console.log(data);
+}
+
