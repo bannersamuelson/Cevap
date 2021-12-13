@@ -40,6 +40,7 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 Wire frame links:
 ![wireframe1](https://ibb.co/grpPL7s
+"wireframe")
 https://ibb.co/s5ZNNDC
 https://ibb.co/cDdTZ8c
 https://ibb.co/qdKG0Sj "wire frames")
