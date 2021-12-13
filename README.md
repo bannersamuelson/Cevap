@@ -75,19 +75,33 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Working with API | H | 1 hrs|
+| Adding HTML and CSS for stying | L | 2 |
+| Nav bar and flex display | H | 1.5 hours |
+| Search bar input JS | H| 3 hours |
+| Display item information | H | 3 hours |
+| Page scroll functionality | L | 1.5 hours |
+| CSS Styling| M | 2 hours |
+| User feedback display | M | 3 hours |
+| API functionality | H| 3 hours |
+| JavaScript "my library" | M | 3 hours |
+| JavaScript "my favorites" | M | 3 hours |
+| Media Query Styling | H | 3 hours|
+| Background imaging | L | 2 hour |
+| Debugging | M | 3 hours |
 
-## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+| Total | 33.5 hours |
 
-```
+<!-- ## Code Snippet
+
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description.   -->
+
+<!-- ```
 function reverse(string) {
 	// here is the code to reverse a string of text
 }
-```
+``` -->
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ <!-- Use this section to document what changes were made and the reasoning behind those changes.   -->
