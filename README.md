@@ -5,7 +5,7 @@ I am going to create a website application that will be able to access video gam
 ## Project Name
 
 
-Cevap - ("game" in Turkish)
+Cevap Game Database - ("game" in Turkish)
 ## Project Description
 
  The app project will be a lookup machine for fast video game information without needing to do multiple searches. 
@@ -85,9 +85,7 @@ deck: "Various football players are already duking it out for the rights to be n
 | Media Query Styling | H | 3 hours|
 | Background imaging | L | 2 hour |
 | Debugging | M | 3 hours |
-
-
-| Total | 33.5 hours |
+| Total | H | 33.5 hours |
 
 <!-- ## Code Snippet
 
