@@ -21,7 +21,6 @@
 // const PORT = process.env.PORT || 3000;
 // app.listen(PORT, () => console.log(`listening on ${PORT}`));
 const gameResults = document.querySelector(".gameResults");
-const gameInfo = document.querySelector(".gameInfo");
 
 async function getGame(name) {
   try {
@@ -46,13 +45,14 @@ function renderList(gameData) {
     console.log(game.name);
 
     const gamePhoto = document.createElement("img")
-    gamePhoto.src = game.image.screen_url;
+    gamePhoto.src = game.image.medium_url;
     gamePhoto.alt = `Post of ${game.name}`;
     gameResults.appendChild(gamePhoto);
 
     const gameTitle = document.createElement("h2");
     gameTitle.innerText = game.name;
     gameResults.appendChild(gameTitle);
+
   });
 }
 

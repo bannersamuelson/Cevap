@@ -1,6 +1,7 @@
 body {
   background: #f9f9f8;
   color: #595959;
+  /* height: auto; */
   
 }
 
@@ -12,7 +13,7 @@ nav {
   justify-content: center;
 }
 
-ul {
+#navId {
   display: flex;
   list-style: none;
   min-width: 30vw;
@@ -38,15 +39,9 @@ ul {
   color: #f9f9f8;
 }
 
-/* .side {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-} */
 
 .gameResults {
-  
-  max-width: 50%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -56,8 +51,11 @@ ul {
   border: 20px solid #f9f9f8 ;
 }
 
-.gameInfo {
-  color: white;
-  background: black;
-}
 
+img {
+  max-width: 25%;
+  max-height: auto;
+}
+ h2 {
+   width: 75%;
+ }
