@@ -42,7 +42,7 @@ Wire frame links:
 ![wireframe1](https://ibb.co/grpPL7s
 https://ibb.co/s5ZNNDC
 https://ibb.co/cDdTZ8c
-https://ibb.co/qdKG0Sj) "wire frames"
+https://ibb.co/qdKG0Sj "wire frames")
 ### MVP/PostMVP
 
 - Be able to search a databse for games
