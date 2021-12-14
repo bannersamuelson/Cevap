@@ -22,57 +22,81 @@
 // app.listen(PORT, () => console.log(`listening on ${PORT}`));
 const gameResults = document.querySelector(".gameResults");
 const gameInfo = document.querySelector(".gameInfo");
+const formSearch = document.querySelector("#formSearch");
+const gameFinder = document.querySelector("#gameFinder")
+
+
 
 async function getGame(name) {
   try {
-    const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game?limit=25`;
     const res = await axios.get(url);
     const gameData = res.data.results;
     console.log(gameData);
-    renderList(gameData);
-    // gameData.forEach((gameObj) => {
-    //   showGameData(gameObj);
-    // });
+
+
+    gameData.forEach((game) => {
+      showGameData(game);
+      // gameData.forEach((gameObj) => {
+      //   showGameData(gameObj);
+    });
+
+
+
   } catch (error) {
     console.log("error");
   }
 
 }
 
+formSearch.addEventListener("submit", handleSubmit);
 
 
-function renderList(gameData) {
-  gameData.forEach((game) => {
-    console.log(game.name);
-
-    const gamePhoto = document.createElement("img")
-    gamePhoto.src = game.image.medium_url;
-    gamePhoto.alt = `Post of ${game.name}`;
-    gameResults.appendChild(gamePhoto);
-    gamePhoto.setAttribute("class", "row")
-
-    const gameTitle = document.createElement("h2");
-    // h2.classList.add(".sub");
-    gameTitle.innerText = game.name;
-    gameResults.appendChild(gameTitle);
-    gameTitle.setAttribute("class", "row")
-
-    const platform = document.createElement("h4");
-    platform.innerText = game.platforms[0].name;
-    gameResults.appendChild(platform);
-    platform.setAttribute("class", "row")
-
-
-    const deck = document.createElement("h4");
-    deck.innerText = game.deck;
-    gameResults.appendChild(platform);
-    deck.setAttribute("class", "row")
-
-
-
-  });
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log(gameFinder.value);
+  let inputValue = gameFinder.value;
+  gameFinder.value = "";
+  getGame(inputValue);
+  removeGame();
 }
-getGame("grand");
+
+
+function removeGame() {
+  gameResults.innerHTML = "";
+}
+
+
+
+
+function showGameData(game) {
+
+  const gamePhoto = document.createElement("img")
+  gamePhoto.src = game.image.medium_url;
+  gamePhoto.alt = `Post of ${game.name}`;
+  gameResults.appendChild(gamePhoto);
+  gamePhoto.setAttribute("class", "row")
+
+  const gameTitle = document.createElement("h2");
+  // h2.classList.add(".sub");
+  gameTitle.innerText = game.name;
+  gameResults.appendChild(gameTitle);
+  gameTitle.setAttribute("class", "row")
+
+  // const platform = document.createElement("h4");
+  // platform.innerText = `${game.platforms[0].name}`;
+  // gameResults.appendChild(platform);
+  // platform.setAttribute("class", "row")
+
+  const deck = document.createElement("h4");
+  deck.innerText = game.deck;
+  gameResults.appendChild(deck);
+  deck.setAttribute("class", "row")
+
+};
+
+
+// getGame("madden");
 
 // function displayErrorMessage() {
 //   console.log("error");
