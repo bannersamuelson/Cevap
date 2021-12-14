@@ -3,6 +3,7 @@ body {
   color: #595959;
   font-family: 'Poiret One', cursive;
 font-family: 'Roboto', sans-serif;
+border: 1px solid red;
   /* height: auto; */
   
 }
@@ -11,7 +12,14 @@ font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
 
-nav {
+#library {
+  padding: 50px;
+}
+
+#favorites {
+  padding: 50px 20px;
+}
+.navBar {
   height: 10vh;
   display: flex;
   flex-wrap: wrap;
@@ -25,16 +33,17 @@ nav {
   display: flex;
   list-style: none;
   min-width: 30vw;
-  font-size: 30px;
+  font-size: 20px;
   align-items: center;
-  justify-content: space-between;
+
 }
 
 .navBar a {
   text-decoration: none;
   /* padding: 10px 20px; */
   color: #595959; 
-  border: solid 10px #f9f9f8;
+  border: 5px solid #f9f9f8
+ 
   /* border-radius: 0px; */
   
 }
@@ -55,7 +64,7 @@ nav {
 
 .searchBar {
   align-items: center;
-  background: #595959 none repeat scroll 0 0;
+  background: #f9f9f8 none repeat scroll 0 0;
   border-radius: 25px;
   display: flex;
   justify-content: space-between;
@@ -64,7 +73,7 @@ nav {
 }
 
 .searchBar:hover, .searchBar:focus {
-  cursor: pointer;
+  /* cursor: pointer; */
   background: #f9f9f8;
 }
 
@@ -92,7 +101,7 @@ outline: 0;
   row-gap: 25px;
   column-gap: 5%;
   padding: 50px;
-  background-color: white;
+  background-color: blue;
 }
 
 
