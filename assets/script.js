@@ -29,7 +29,7 @@ const gameFinder = document.querySelector("#gameFinder")
 
 async function getGame(name) {
   try {
-    const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game?limit=25`;
+    const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
     const res = await axios.get(url);
     const gameData = res.data.results;
     console.log(gameData);
@@ -37,8 +37,7 @@ async function getGame(name) {
 
     gameData.forEach((game) => {
       showGameData(game);
-      // gameData.forEach((gameObj) => {
-      //   showGameData(gameObj);
+
     });
 
 
@@ -93,6 +92,10 @@ function showGameData(game) {
   gameResults.appendChild(deck);
   deck.setAttribute("class", "row")
 
+  const favorite = document.createElement("button");
+  gameResults.appendChild(favorite);
+  favorite.setAttribute("class", "button1")
+  favorite.setAttribute("id", "heart")
 };
 
 
