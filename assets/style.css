@@ -15,6 +15,7 @@ border: 1px solid red;
   text-align: center;
   align-items: flex-start;
   padding: 20px 20px;
+  justify-content: center;
 
 }
 
@@ -92,10 +93,14 @@ h5{
 }
 
 .searchBar:hover, .searchBar:focus {
-  /* cursor: pointer; */
   background: #f9f9f8;
+ 
+
 }
 
+.searchBar button {
+  cursor: pointer;
+}
 
 .searchBar button,
 .searchBar input {
