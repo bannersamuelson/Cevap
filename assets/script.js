@@ -25,24 +25,40 @@ const gameInfo = document.querySelector(".gameInfo");
 const formSearch = document.querySelector("#formSearch");
 const gameFinder = document.querySelector("#gameFinder");
 const myFavorites = document.querySelector(".myFavorites");
-const logoImg = document.querySelector(".logo")
-const onLoad = document.querySelector(".onLoad")
+const logoImg = document.querySelector(".logo");
+const pageLoad = document.querySelector(".onLoad");
+const button2 = document.querySelector("#nextPage");
+let page = 1;
+let inputValue = "";
+
+button2.addEventListener("click", () => {
+  page += 1;
+  getGame(inputValue)
+})
 
 async function getGame(name) {
+  gameResults.innerHTML = "";
+  pageLoad.innerHTML = "";
   try {
-    const url = `http://www.giantbomb.com/api/search/?page=2&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
-    const res = await axios.get(url);
+    const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    const url2 = `http://www.giantbomb.com/api/search/?page=${page}&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    let res
+    if (page > 1) {
+      res = await axios.get(url2);
+    } else {
+      res = await axios.get(url);
+    }
     const gameData = res.data.results;
 
     console.log(gameData);
     gameData.forEach((game) => {
       showGameData(game);
 
-
+      // onLoad.innerHTML = "";
     });
 
   } catch (error) {
-    console.log("error");
+    console.log(error);
   }
 
 }
@@ -54,11 +70,15 @@ formSearch.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
   console.log(gameFinder.value);
-  let inputValue = gameFinder.value;
+  inputValue = gameFinder.value;
   gameFinder.value = "";
   getGame(inputValue);
   removeGame();
+
 }
+
+
+// getGame("fifa")
 
 //clearing search data
 function removeGame() {
@@ -81,16 +101,15 @@ function showGameData(game) {
   gameTitle.setAttribute("class", "row")
 
   // If statement for game platforms //
-  if (game.platforms[0].name !== null) {
-    const platform = document.createElement("h4");
-    platform.innerText = `${game.platforms[0].name}`;
-    gameResults.appendChild(platform);
-    platform.setAttribute("class", "row")
-  } else if (game.platforms[1].name !== null) {
-    platform.innerText = `${game.platforms[1].name}`;
-    gameResults.appendChild(platform);
-    platform.setAttribute("class", "row")
-  }
+  let platformList = document.createElement("ul")
+  game.platforms.forEach((system) => {
+    const platform = document.createElement("li");
+    platform.innerText = `${system.name}`;
+    platformList.appendChild(platform);
+    platform.setAttribute("class", "plat")
+  })
+  gameResults.appendChild(platformList);
+
 
   const deck = document.createElement("h4");
   deck.innerText = game.deck;
@@ -117,7 +136,35 @@ function showGamedata(data) {
 //   favorites.push(gameData.game)
 // }
 
+async function onLoad(name) {
+  {
+    const newUrl = `http://www.giantbomb.com/api/search/?page=2&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    const newRes = await axios.get(newUrl);
+    const newGameData = newRes.data.results;
 
+    console.log(newGameData);
+    newGameData.forEach((game) => {
+      randomGameData(game)
+    });
+  }
+  function randomGameData(game) {
+
+    const largePhoto = document.createElement("img")
+    largePhoto.src = game.image.screen_url;
+    largePhoto.alt = `Post of ${game.name}`;
+    pageLoad.appendChild(largePhoto);
+
+  }
+}
+
+onLoad("madden")
+
+//   } catch (error) {
+//     console.log("error");
+//   }
+
+
+// };
 
 
 

@@ -1,11 +1,14 @@
+
+
+
 body {
-  background: #f9f9f8;
-  color: #595959;
-  font-family: 'Poiret One', cursive;
+background: #f9f9f8;
+color: #595959;
+font-family: 'Poiret One', cursive;
 font-family: 'Roboto', sans-serif;
 border: 1px solid red;
-  /* height: auto; */
-  
+margin: 0;
+height: 100%;  
 }
 
 .logo {
@@ -169,4 +172,11 @@ padding: 50px;
 #heart:hover::before,
 #heart:hover::after{
   background-color: #595959;
+}
+
+/* ON PAGE LOAD style */
+.onLoad {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
