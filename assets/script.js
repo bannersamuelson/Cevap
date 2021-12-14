@@ -23,30 +23,29 @@
 const gameResults = document.querySelector(".gameResults");
 const gameInfo = document.querySelector(".gameInfo");
 const formSearch = document.querySelector("#formSearch");
-const gameFinder = document.querySelector("#gameFinder")
-
-
+const gameFinder = document.querySelector("#gameFinder");
+const myFavorites = document.querySelector(".myFavorites");
+const logoImg = document.querySelector(".logo")
 
 async function getGame(name) {
   try {
-    const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    const url = `http://www.giantbomb.com/api/search/?page=2&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
     const res = await axios.get(url);
     const gameData = res.data.results;
+
     console.log(gameData);
-
-
     gameData.forEach((game) => {
       showGameData(game);
 
+
     });
-
-
 
   } catch (error) {
     console.log("error");
   }
 
 }
+
 
 formSearch.addEventListener("submit", handleSubmit);
 
@@ -66,8 +65,7 @@ function removeGame() {
 }
 
 
-
-
+// getting game data to display in class gameResults
 function showGameData(game) {
 
   const gamePhoto = document.createElement("img")
@@ -77,15 +75,21 @@ function showGameData(game) {
   gamePhoto.setAttribute("class", "row")
 
   const gameTitle = document.createElement("h2");
-  // h2.classList.add(".sub");
   gameTitle.innerText = game.name;
   gameResults.appendChild(gameTitle);
   gameTitle.setAttribute("class", "row")
 
-  // const platform = document.createElement("h4");
-  // platform.innerText = `${game.platforms[0].name}`;
-  // gameResults.appendChild(platform);
-  // platform.setAttribute("class", "row")
+  // If statement for game platforms //
+  if (game.platforms[0].name !== null) {
+    const platform = document.createElement("h4");
+    platform.innerText = `${game.platforms[0].name}`;
+    gameResults.appendChild(platform);
+    platform.setAttribute("class", "row")
+  } else if (game.platforms[1].name !== null) {
+    platform.innerText = `${game.platforms[1].name}`;
+    gameResults.appendChild(platform);
+    platform.setAttribute("class", "row")
+  }
 
   const deck = document.createElement("h4");
   deck.innerText = game.deck;
@@ -96,15 +100,20 @@ function showGameData(game) {
   gameResults.appendChild(favorite);
   favorite.setAttribute("class", "button1")
   favorite.setAttribute("id", "heart")
+  favorite.setAttribute("type", "submit")
 };
-
-
-// getGame("madden");
-
-// function displayErrorMessage() {
-//   console.log("error");
-// }
 
 function showGamedata(data) {
   console.log(data);
-}
+};
+
+
+
+
+
+
+
+
+
+
+

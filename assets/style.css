@@ -8,6 +8,29 @@ border: 1px solid red;
   
 }
 
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  align-items: flex-start;
+  padding: 20px 20px;
+
+}
+
+h1{
+  margin: 0;
+}
+h5{
+  margin: 0;
+}
+.logo img {
+  height: 70px;
+  position: relative;
+  margin: 0;
+}
+
+/* NAV BAR */
 #library {
   padding: 50px;
 }
@@ -99,7 +122,7 @@ padding: 50px;
 }
 
 .row {
-  width: 22%;
+  width: 20%;
 }
 
 .button1 {
@@ -138,6 +161,7 @@ padding: 50px;
 
 #heart:hover {
   background-color: #595959;
+  cursor: pointer;
 }
 
 #heart:hover::before,
