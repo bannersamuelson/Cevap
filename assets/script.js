@@ -57,11 +57,17 @@ function renderList(gameData) {
     gameResults.appendChild(gameTitle);
     gameTitle.setAttribute("class", "row")
 
-    const test = document.createElement("h4");
-    // h2.classList.add(".sub");
-    test.innerText = game.platforms[0].name;
-    gameResults.appendChild(test);
-    test.setAttribute("class", "row")
+    const platform = document.createElement("h4");
+    platform.innerText = game.platforms[0].name;
+    gameResults.appendChild(platform);
+    platform.setAttribute("class", "row")
+
+
+    const deck = document.createElement("h4");
+    deck.innerText = game.deck;
+    gameResults.appendChild(platform);
+    deck.setAttribute("class", "row")
+
 
 
   });

@@ -94,6 +94,7 @@ align-items: center;
 margin: auto;
 column-gap: 10px;
 row-gap: 25px;
+padding: 50px;
   /* display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -107,7 +108,7 @@ row-gap: 25px;
 }
 
 .row {
-  width: 32%;
+  width: 22%;
 }
 
 .test {
@@ -116,9 +117,9 @@ row-gap: 25px;
 
 
 img {
-  max-width: 50%;
-  max-height: auto;
-  vertical-align: middle;
+  /* max-width: auto;
+  max-height: auto; */
+  /* vertical-align: middle; */
 }
  /* h2 {
    width: 70%;
