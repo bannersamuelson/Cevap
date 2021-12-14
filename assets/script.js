@@ -49,12 +49,20 @@ function renderList(gameData) {
     gamePhoto.src = game.image.medium_url;
     gamePhoto.alt = `Post of ${game.name}`;
     gameResults.appendChild(gamePhoto);
+    gamePhoto.setAttribute("class", "row")
 
     const gameTitle = document.createElement("h2");
     // h2.classList.add(".sub");
     gameTitle.innerText = game.name;
     gameResults.appendChild(gameTitle);
-    gameTitle.setAttribute("id", game.id)
+    gameTitle.setAttribute("class", "row")
+
+    const test = document.createElement("h4");
+    // h2.classList.add(".sub");
+    test.innerText = game.platforms[0].name;
+    gameResults.appendChild(test);
+    test.setAttribute("class", "row")
+
 
   });
 }
