@@ -26,6 +26,7 @@ const formSearch = document.querySelector("#formSearch");
 const gameFinder = document.querySelector("#gameFinder");
 const myFavorites = document.querySelector(".myFavorites");
 const logoImg = document.querySelector(".logo")
+const onLoad = document.querySelector(".onLoad")
 
 async function getGame(name) {
   try {
@@ -49,7 +50,7 @@ async function getGame(name) {
 
 formSearch.addEventListener("submit", handleSubmit);
 
-
+//search input operable:
 function handleSubmit(event) {
   event.preventDefault();
   console.log(gameFinder.value);
@@ -59,7 +60,7 @@ function handleSubmit(event) {
   removeGame();
 }
 
-
+//clearing search data
 function removeGame() {
   gameResults.innerHTML = "";
 }
@@ -108,6 +109,13 @@ function showGamedata(data) {
 };
 
 
+
+// favorites feature// const myFavorites = document.querySelector(".myFavorites")
+// const favorites = []
+
+// function saveGame(gameData) {
+//   favorites.push(gameData.game)
+// }
 
 
 

@@ -12,21 +12,17 @@ border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  text-align: center;
-  align-items: flex-start;
-  padding: 20px 20px;
+  text-align:center;
+  align-items: center;
   justify-content: center;
+  align-content: flex-start;
+  background: #595959;
 
 }
 
-h1{
-  margin: 0;
-}
-h5{
-  margin: 0;
-}
+
 .logo img {
-  height: 70px;
+  height: 100px;
   position: relative;
   margin: 0;
 }
@@ -46,6 +42,7 @@ h5{
   flex-direction: row;
   align-content: center;
   justify-content: center;
+  padding: 50px;
 }
 
 
