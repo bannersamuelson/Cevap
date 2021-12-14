@@ -74,7 +74,6 @@ function handleSubmit(event) {
   gameFinder.value = "";
   getGame(inputValue);
   removeGame();
-
 }
 
 
@@ -106,7 +105,7 @@ function showGameData(game) {
     const platform = document.createElement("li");
     platform.innerText = `${system.name}`;
     platformList.appendChild(platform);
-    platform.setAttribute("class", "plat")
+    platform.setAttribute("class", "row")
   })
   gameResults.appendChild(platformList);
 
@@ -121,6 +120,8 @@ function showGameData(game) {
   favorite.setAttribute("class", "button1")
   favorite.setAttribute("id", "heart")
   favorite.setAttribute("type", "submit")
+
+
 };
 
 function showGamedata(data) {

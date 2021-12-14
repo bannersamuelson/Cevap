@@ -130,6 +130,14 @@ padding: 50px;
   width: 20%;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 12%
+}
+
+
 .button1 {
   border: none;
 }
