@@ -28,6 +28,7 @@ const myFavorites = document.querySelector(".myFavorites");
 const logoImg = document.querySelector(".logo");
 const pageLoad = document.querySelector(".onLoad");
 const button2 = document.querySelector("#nextPage");
+const button3 = document.querySelector("#previousPage");
 let page = 1;
 let inputValue = "";
 
@@ -35,6 +36,17 @@ button2.addEventListener("click", () => {
   page += 1;
   getGame(inputValue)
 })
+
+button3.addEventListener("click", () => {
+  if (page > 1) {
+    page -= 1;
+    getGame(inputValue);
+  } else if (page === 0) {
+    page === 0
+  } else {
+    console.log("invalid");
+  }
+});
 
 async function getGame(name) {
   gameResults.innerHTML = "";
@@ -50,10 +62,13 @@ async function getGame(name) {
     }
     const gameData = res.data.results;
 
+
     console.log(gameData);
     gameData.forEach((game) => {
       showGameData(game);
 
+      document.createElement("button")
+      button2.setAttribute("id", "nextPage")
       // onLoad.innerHTML = "";
     });
 
@@ -73,7 +88,9 @@ function handleSubmit(event) {
   inputValue = gameFinder.value;
   gameFinder.value = "";
   getGame(inputValue);
+
   removeGame();
+
 }
 
 
@@ -88,24 +105,26 @@ function removeGame() {
 // getting game data to display in class gameResults
 function showGameData(game) {
 
+
   const gamePhoto = document.createElement("img")
   gamePhoto.src = game.image.medium_url;
   gamePhoto.alt = `Post of ${game.name}`;
   gameResults.appendChild(gamePhoto);
-  gamePhoto.setAttribute("class", "row")
+  gamePhoto.setAttribute("class", "imgFlex")
 
   const gameTitle = document.createElement("h2");
   gameTitle.innerText = game.name;
   gameResults.appendChild(gameTitle);
-  gameTitle.setAttribute("class", "row")
+  gameTitle.setAttribute("class", "titleGame")
 
   // If statement for game platforms //
   let platformList = document.createElement("ul")
+  platformList.setAttribute("class", "test")
   game.platforms.forEach((system) => {
     const platform = document.createElement("li");
     platform.innerText = `${system.name}`;
     platformList.appendChild(platform);
-    platform.setAttribute("class", "row")
+    platform.setAttribute("class", "plat")
   })
   gameResults.appendChild(platformList);
 
@@ -151,7 +170,7 @@ async function onLoad(name) {
   function randomGameData(game) {
 
     const largePhoto = document.createElement("img")
-    largePhoto.src = game.image.screen_url;
+    largePhoto.src = game.image.medium_url;
     largePhoto.alt = `Post of ${game.name}`;
     pageLoad.appendChild(largePhoto);
 

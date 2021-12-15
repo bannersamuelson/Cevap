@@ -115,33 +115,47 @@ outline: 0;
 }
 
 .gameResults {
-  width: 50%;
+width: auto;
  display: flex;
 justify-content:space-between;
 flex-wrap: wrap;
 align-items: center;
-margin: auto;
-column-gap: 10px;
+margin-left: 20%;
+margin-right: 20%;
+column-gap: 1%;
 row-gap: 25px;
-padding: 50px; 
+/* padding: 50px;  */
 }
 
+.test {
+  width: 10%;
+}
+.titleGame {
+  width: 15%;
+}
 .row {
-  width: 20%;
+  width: 25%;
+  display: flex;
+}
+
+.imgFlex {
+  max-width: 25%
 }
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 12%
+  /* margin: 0;
+  padding: 0; */
+  width: auto;
 }
 
 
 .button1 {
   border: none;
+  width: 5%;
 }
 
+ /* MAKING HEART BUTTON */
 #heart {
   background-color: #dfdfdf;
   display: inline-block;
@@ -185,6 +199,11 @@ ul {
 /* ON PAGE LOAD style */
 .onLoad {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow:row wrap;
   justify-content: center;
+}
+
+.onLoad img {
+  height:600px;
+  width: 25%;
 }
