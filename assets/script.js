@@ -25,57 +25,62 @@ const gameInfo = document.querySelector(".gameInfo");
 const formSearch = document.querySelector("#formSearch");
 const gameFinder = document.querySelector("#gameFinder");
 const myFavorites = document.querySelector(".myFavorites");
+const favoritesArray = []
 const logoImg = document.querySelector(".logo");
 const pageLoad = document.querySelector(".onLoad");
 const button2 = document.querySelector("#nextPage");
 const button3 = document.querySelector("#previousPage");
+const logo = document.querySelector(".logo");
+
+logo.addEventListener("click", () => {
+  gameInfo.style.display = "none";
+  onLoad("fifa");
+
+})
+
 let page = 1;
-let inputValue = "";
+let currentSearchValue = "";
 
 button2.addEventListener("click", () => {
   page += 1;
-  getGame(inputValue)
+  getGame(currentSearchValue)
 })
 
 button3.addEventListener("click", () => {
   if (page > 1) {
     page -= 1;
-    getGame(inputValue);
-  } else if (page === 0) {
-    page === 0
+    getGame(currentSearchValue);
   } else {
     console.log("invalid");
   }
 });
 
 async function getGame(name) {
+  console.log(name, currentSearchValue)
+  if (currentSearchValue !== name) {
+    page = 1;
+  }
+  currentSearchValue = name;
   gameResults.innerHTML = "";
   pageLoad.innerHTML = "";
-  try {
-    const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
-    const url2 = `http://www.giantbomb.com/api/search/?page=${page}&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
-    let res
-    if (page > 1) {
-      res = await axios.get(url2);
-    } else {
-      res = await axios.get(url);
-    }
-    const gameData = res.data.results;
 
+  try {
+    // const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    const url = `http://www.giantbomb.com/api/search/?page=${page}&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    let res = await axios.get(url);
+
+    const gameData = res.data.results;
 
     console.log(gameData);
     gameData.forEach((game) => {
       showGameData(game);
 
-      document.createElement("button")
-      button2.setAttribute("id", "nextPage")
-      // onLoad.innerHTML = "";
+
     });
 
   } catch (error) {
     console.log(error);
   }
-
 }
 
 
@@ -85,13 +90,13 @@ formSearch.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
   console.log(gameFinder.value);
-  inputValue = gameFinder.value;
+  getGame(gameFinder.value);
   gameFinder.value = "";
-  getGame(inputValue);
-
   removeGame();
-
-}
+  gameInfo.style.display = "block";
+  button2.style.display = "block";
+  button3.style.display = "block";
+};
 
 
 // getGame("fifa")
@@ -104,7 +109,6 @@ function removeGame() {
 
 // getting game data to display in class gameResults
 function showGameData(game) {
-
 
   const gamePhoto = document.createElement("img")
   gamePhoto.src = game.image.medium_url;
@@ -137,6 +141,9 @@ function showGameData(game) {
   deck.innerText = game.deck;
   gameResults.appendChild(deck);
   deck.setAttribute("class", "row")
+  const learnMore = document.createElement("button")
+
+
 
   const favorite = document.createElement("button");
   gameResults.appendChild(favorite);
@@ -153,15 +160,20 @@ function showGamedata(data) {
 
 
 
-// favorites feature// const myFavorites = document.querySelector(".myFavorites")
-// const favorites = []
 
-// function saveGame(gameData) {
-//   favorites.push(gameData.game)
-// }
+
+function saveGame(gameData) {
+  favoritesArray.push(gameData.game)
+
+}
+
+
+
 
 async function onLoad(name) {
   {
+    pageLoad.style.display = "flex";
+
     const newUrl = `http://www.giantbomb.com/api/search/?limit=8&page=2&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
     const newRes = await axios.get(newUrl);
     const newGameData = newRes.data.results;
@@ -179,7 +191,6 @@ async function onLoad(name) {
     largePhoto.src = game.image.medium_url;
     largePhoto.alt = `Post of ${game.name}`;
     pageLoad.appendChild(largePhoto);
-
 
 
   }

@@ -11,7 +11,9 @@ margin: 0;
 height: 100%;  
 }
 
+
 .logo {
+  position: sticky;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -72,9 +74,17 @@ height: 100%;
   border-bottom: 1px solid #595959;
 }
 
-/* .navbar a:focus {
+#nextPage, #previousPage {
+  display:none;
+}
 
-} */
+.gameResults {
+  display: none;
+}
+
+.onLoad {
+  display: none;
+}
 
 .navBar a.active {
   background-color: #595959;
@@ -207,6 +217,16 @@ ul {
 }
 
 .onLoad img {
-  height:600px;
+  height:auto;
   width: 25%;
+}
+
+
+.footer {
+  position: absolute;
+  width: 100%;
+  background-color: #595959;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
