@@ -117,9 +117,13 @@ function showGameData(game) {
   gameResults.appendChild(gameTitle);
   gameTitle.setAttribute("class", "titleGame")
 
-  // If statement for game platforms //
+  //platform forEach loop
   let platformList = document.createElement("ul")
-  platformList.setAttribute("class", "test")
+  let icon = document.createElement("i");
+  icon.setAttribute("class", "fa fa-gamepad");
+  icon.setAttribute("aria-hidden", "true");
+  platformList.appendChild(icon);
+  platformList.setAttribute("class", "ulSize")
   game.platforms.forEach((system) => {
     const platform = document.createElement("li");
     platform.innerText = `${system.name}`;
@@ -158,7 +162,7 @@ function showGamedata(data) {
 
 async function onLoad(name) {
   {
-    const newUrl = `http://www.giantbomb.com/api/search/?page=2&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    const newUrl = `http://www.giantbomb.com/api/search/?limit=8&page=2&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
     const newRes = await axios.get(newUrl);
     const newGameData = newRes.data.results;
 
@@ -167,12 +171,16 @@ async function onLoad(name) {
       randomGameData(game)
     });
   }
+
   function randomGameData(game) {
+
 
     const largePhoto = document.createElement("img")
     largePhoto.src = game.image.medium_url;
     largePhoto.alt = `Post of ${game.name}`;
     pageLoad.appendChild(largePhoto);
+
+
 
   }
 }

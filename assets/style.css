@@ -127,18 +127,22 @@ row-gap: 25px;
 /* padding: 50px;  */
 }
 
-.test {
-  width: 10%;
+.ulSize {
+  min-width: 10%;
+  max-width: 10%;
 }
 .titleGame {
-  width: 15%;
+  min-width: 15%;
+  max-width: 15%;
 }
 .row {
-  width: 25%;
+  min-width: 25%;
+  max-width: 25%;
   display: flex;
 }
 
 .imgFlex {
+  min-width: 25%;
   max-width: 25%
 }
 
@@ -146,7 +150,6 @@ ul {
   list-style-type: none;
   /* margin: 0;
   padding: 0; */
-  width: auto;
 }
 
 
