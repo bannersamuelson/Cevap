@@ -9,21 +9,19 @@ font-family: 'Roboto', sans-serif;
 border: 1px solid red;
 margin: 0;
 height: 100%;  
+width: 100%;
 }
 
 
 .logo {
   position: sticky;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-  align-content: flex-start;
+  text-align: center;
+  justify-content: flex-start;
   background: #595959;
-
 }
+
+
 
 
 .logo img {
@@ -32,6 +30,9 @@ height: 100%;
   margin: 0;
 }
 
+.logo img:hover {
+  cursor: pointer;
+}
 /* NAV BAR */
 #library {
   padding: 50px;
@@ -85,6 +86,8 @@ height: 100%;
 .onLoad {
   display: none;
 }
+
+ 
 
 .navBar a.active {
   background-color: #595959;
@@ -228,5 +231,5 @@ ul {
   background-color: #595959;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 10px 0;
 }
