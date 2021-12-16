@@ -293,7 +293,7 @@ row-gap: 25px;
 }
 .titleGame {
   min-width: 15%;
-  max-width: 15%;
+  max-width: 20%;
   display: flex;
   align-content: center;
   justify-content: space-around;
@@ -304,6 +304,7 @@ row-gap: 25px;
   color: #b1b1b1;
   background-color: #f9f9f9;
   border: none;
+  padding: 20px;
 }
 
 .fa-heart:hover {
@@ -384,7 +385,6 @@ ul {
   justify-content: center;
   background-color: #b1b1b1;
   width: 100%;
-
 }
 
 .myFavorites img {

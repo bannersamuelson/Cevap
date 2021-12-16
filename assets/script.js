@@ -64,6 +64,7 @@ home.addEventListener("click", () => {
   gameFinder.value = "";
   images.style.display = "inline-flex";
   myFavorites.style.display = "none";
+  fav.style.borderBottom = "none";
 })
 
 // carousel image click functions
@@ -188,6 +189,8 @@ async function getGame(name) {
 
     images.style.display = "none";
     ourChoices.style.display = "none";
+    myFavorites.style.display = "none";
+    fav.style.borderBottom = "none";
 
   } catch (error) {
     console.log(error);
@@ -315,6 +318,9 @@ function showGameData(game) {
       dots.style.display = "none";
       ourChoices.style.display = "none";
       myFavorites.style.display = "block";
+      fav.style.borderBottom = "solid 1px #d5d5d5"
+      fav.style.borderMargin = "margin: 0 20px 10px 20px;"
+
 
 
     })
@@ -360,11 +366,6 @@ function showGamedata(data) {
 function saveGame(gameData) {
   favoritesArray.push(gameData.game)
 }
-
-
-
-
-
 
 let slideIndex = 1;
 showSlides(slideIndex);
