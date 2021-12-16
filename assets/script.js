@@ -115,8 +115,12 @@ async function getGame(name) {
       showGameData(game);
       carousel.style.display = "none";
       dots.style.display = "none";
-
     });
+    if (gameData.length < 10) {
+      button2.style.display = "none";
+    } else {
+      button2.style.display = "block";
+    }
 
   } catch (error) {
     console.log(error);
@@ -241,31 +245,31 @@ function saveGame(gameData) {
 
 
 
-async function onLoad(name) {
-  {
-    pageLoad.style.display = "flex";
+// async function onLoad(name) {
+//   {
+//     pageLoad.style.display = "flex";
 
-    const newUrl = `http://www.giantbomb.com/api/search/?limit=8&page=2&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
-    const newRes = await axios.get(newUrl);
-    const newGameData = newRes.data.results;
+//     const newUrl = `http://www.giantbomb.com/api/search/?limit=8&page=2&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+//     const newRes = await axios.get(newUrl);
+//     const newGameData = newRes.data.results;
 
-    console.log(newGameData);
-    newGameData.forEach((game) => {
-      randomGameData(game)
-    });
-  }
+//     console.log(newGameData);
+//     newGameData.forEach((game) => {
+//       randomGameData(game)
+//     });
+//   }
 
-  function randomGameData(game) {
-
-
-    const largePhoto = document.createElement("img")
-    largePhoto.src = game.image.medium_url;
-    largePhoto.alt = `Post of ${game.name}`;
-    pageLoad.appendChild(largePhoto);
+//   function randomGameData(game) {
 
 
-  }
-}
+//     const largePhoto = document.createElement("img")
+//     largePhoto.src = game.image.medium_url;
+//     largePhoto.alt = `Post of ${game.name}`;
+//     pageLoad.appendChild(largePhoto);
+
+
+//   }
+// }
 
 // onLoad("madden")
 

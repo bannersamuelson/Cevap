@@ -1,3 +1,14 @@
+body {
+background: #f9f9f8;
+color: #595959;
+font-family: 'Poiret One', cursive;
+font-family: 'Roboto', sans-serif;
+
+margin: 0;
+
+width: 100%;
+}
+
 /* CAROUSEL */
 * {box-sizing:border-box}
 
@@ -6,6 +17,10 @@
   max-width: 75%;
   position: relative;
   margin: auto;
+}
+
+.carousel:hover {
+  cursor: pointer;
 }
 
 /* Hide the images by default */
@@ -101,16 +116,6 @@
 }
 
 
-body {
-background: #f9f9f8;
-color: #595959;
-font-family: 'Poiret One', cursive;
-font-family: 'Roboto', sans-serif;
-
-margin: 0;
-
-width: 100%;
-}
 
 .logo {
   position: sticky;
