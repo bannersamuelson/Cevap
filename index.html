@@ -16,6 +16,7 @@
   <!-- https://www.geeksforgeeks.org/how-to-add-icon-logo-in-title-bar-using-html/ -->
   <link rel="icon" href="https://res.cloudinary.com/dnv6i44dp/image/upload/v1639593339/Controller_deeogi.png"
     type="image/icon type">
+
   <title>Cevap Game Finder</title>
 </head>
 
@@ -58,6 +59,44 @@
   <div class="new">
     <div class="onLoad"></div>
   </div>
+
+  <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+  <div class="carousel">
+    <h1 id="carouselText">Top 3 Games</h1>
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img id="cod"
+        src="https://go.skimresources.com/?id=87431X1540266&isjs=1&jv=15.2.1-stackpath&sref=https%3A%2F%2Fwww.vg247.com%2Fcall-of-duty-vanguard-warzone-caldera-map-jacket-drop-points&url=https%3A%2F%2Fasset.vg247.com%2Fcall-of-duty-vanguard-caldera.jpeg%2FBROK%2Fresize%2F1920x1920%253E%2Fformat%2Fjpg%2Fquality%2F80%2Fcall-of-duty-vanguard-caldera.jpeg&xs=1&xtz=300&xuuid=45fbbee2a5c02ac2d515222c52c7b06c&cci=b15749b5756f6b2730889ac67dcb6681"
+        style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img id="bf" src="https://2game.com/wp/wp-content/uploads/2021/06/battlefield-2042-teaserbild_6142222.jpg"
+        style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img id="hw" src="https://www.videogameschronicle.com/files/2021/12/Horizon-Forbidden-West-PS4.jpg"
+        style="width:100%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div class="dots"">
+    <span class=" dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
   <footer>
     <div class="footer">
       <p>Website made by Banner Samuelson for General Assembly. Not for commercial use.

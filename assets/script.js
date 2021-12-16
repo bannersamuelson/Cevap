@@ -31,11 +31,38 @@ const pageLoad = document.querySelector(".onLoad");
 const button2 = document.querySelector("#nextPage");
 const button3 = document.querySelector("#previousPage");
 const logo = document.querySelector(".logo");
+const cod = document.querySelector("#cod")
+const bf = document.querySelector("#bf")
+const hw = document.querySelector("#hw")
+const carousel = document.querySelector(".carousel")
+const dots = document.querySelector(".dots");
+
 
 logo.addEventListener("click", () => {
   gameInfo.style.display = "none";
-  onLoad("fifa");
+  carousel.style.display = "block";
+  dots.style.display = "block";
 
+})
+
+// carousel image click functions
+cod.addEventListener("click", () => {
+  callOfDuty();
+  carousel.style.display = "none";
+  dots.style.display = "none";
+
+})
+
+bf.addEventListener("click", () => {
+  battleField()
+  carousel.style.display = "none";
+  dots.style.display = "none";
+});
+
+hw.addEventListener("click", () => {
+  horizon();
+  carousel.style.display = "none";
+  dots.style.display = "none";
 })
 
 let page = 1;
@@ -92,6 +119,37 @@ function handleSubmit(event) {
   console.log(gameFinder.value);
   getGame(gameFinder.value);
   gameFinder.value = "";
+  removeGame();
+  gameInfo.style.display = "block";
+  button2.style.display = "block";
+  button3.style.display = "block";
+};
+
+function callOfDuty() {
+  gameFinder.value = "call of duty";
+  console.log(gameFinder.value);
+  getGame(gameFinder.value);
+  removeGame();
+  gameInfo.style.display = "block";
+  button2.style.display = "block";
+  button3.style.display = "block";
+};
+
+function battleField() {
+  gameFinder.value = "battlefield";
+  console.log(gameFinder.value);
+  getGame(gameFinder.value);
+  removeGame();
+  gameInfo.style.display = "block";
+  button2.style.display = "block";
+  button3.style.display = "block";
+  gameFinder.innerText = "";
+};
+
+function horizon() {
+  gameFinder.value = "horizon forbidden west";
+  console.log(gameFinder.value);
+  getGame(gameFinder.value);
   removeGame();
   gameInfo.style.display = "block";
   button2.style.display = "block";
@@ -196,18 +254,36 @@ async function onLoad(name) {
   }
 }
 
-onLoad("madden")
+// onLoad("madden")
 
-//   } catch (error) {
-//     console.log("error");
-//   }
+var slideIndex = 1;
+showSlides(slideIndex);
 
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-// };
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-
-
-
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
 
 
 
