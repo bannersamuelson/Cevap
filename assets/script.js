@@ -39,6 +39,9 @@ const home = document.querySelector("#library");
 const images = document.querySelector(".images");
 const ourChoices = document.querySelector(".ourChoices")
 const madden = document.querySelector("#mad22");
+const farCry = document.querySelector("#far6");
+const halo = document.querySelector("#haloi");
+const spiderman = document.querySelector("#smm");
 
 
 logo.addEventListener("click", () => {
@@ -85,6 +88,44 @@ mad22.addEventListener("click", () => {
   madden22();
   carousel.style.display = "none";
   dots.style.display = "none";
+  gameFinder.value = ""
+  gameResults.innerHTML = "";
+  pageLoad.innerHTML = "";
+  images.style.display = "none";
+  ourChoices.style.display = "none";
+})
+
+farCry.addEventListener("click", () => {
+  farCry6();
+  carousel.style.display = "none";
+  dots.style.display = "none";
+  gameFinder.value = ""
+  gameResults.innerHTML = "";
+  pageLoad.innerHTML = "";
+  images.style.display = "none";
+  ourChoices.style.display = "none";
+})
+
+halo.addEventListener("click", () => {
+  haloinfin();
+  carousel.style.display = "none";
+  dots.style.display = "none";
+  gameFinder.value = ""
+  gameResults.innerHTML = "";
+  pageLoad.innerHTML = "";
+  images.style.display = "none";
+  ourChoices.style.display = "none";
+})
+
+spiderman.addEventListener("click", () => {
+  spidermanm();
+  carousel.style.display = "none";
+  dots.style.display = "none";
+  gameFinder.value = ""
+  gameResults.innerHTML = "";
+  pageLoad.innerHTML = "";
+  images.style.display = "none";
+  ourChoices.style.display = "none";
 })
 
 
@@ -149,7 +190,6 @@ async function getGame(name) {
   }
 }
 
-
 formSearch.addEventListener("submit", handleSubmit);
 
 //search input operable:
@@ -195,9 +235,8 @@ function horizon() {
   button3.style.display = "flex";
 };
 
-function madden22() {
+function madden22(name) {
   gameFinder.value = "madden 22";
-  console.log(gameFinder.value);
   getGame(gameFinder.value);
   removeGame();
   gameInfo.style.display = "block";
@@ -225,7 +264,7 @@ function haloinfin() {
   button3.style.display = "flex";
 };
 
-function spiderman() {
+function spidermanm() {
   gameFinder.value = "Marvel's Spider-Man: Miles Morales";
   console.log(gameFinder.value);
   getGame(gameFinder.value);
@@ -288,6 +327,7 @@ function showGameData(game) {
   favorite.setAttribute("class", "button1")
   favorite.setAttribute("id", "heart")
   favorite.setAttribute("type", "submit")
+
 
 
 };

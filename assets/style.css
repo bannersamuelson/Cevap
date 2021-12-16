@@ -1,5 +1,5 @@
 body {
-background: dfdfdf;
+background: #f9f9f8;
 color: #595959;
 font-family: 'Poiret One', cursive;
 font-family: 'Roboto', sans-serif;
@@ -377,19 +377,26 @@ ul {
   display: inline-flex;
   justify-content: center;
   column-gap: 1%;
-
+  padding: 2%;  
+  background-color: #b1b1b1;
+  width: 100%;
 }
 
 .choices {
   display: flex;
+ 
 }
 
 .choices img{
-  max-width: 100%;  
+  max-width: 400px;
+  height: auto;
+
+  
 }
 
 .choices:hover {
- box-shadow: 0 5px 5px 5px rgb(194, 194, 194);
+ box-shadow: 10px 10px 10px 5px #595959;
+ margin: 0 10px;
 }
 
 .ourChoices {
