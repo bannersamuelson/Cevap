@@ -3,7 +3,6 @@ background: #f9f9f8;
 color: #595959;
 font-family: 'Poiret One', cursive;
 font-family: 'Roboto', sans-serif;
-
 margin: 0;
 
 width: 100%;
@@ -358,6 +357,30 @@ ul {
   padding: 2%;  
   background-color: #b1b1b1;
   width: 100%;
+}
+
+/* .favorites-container {
+  display: "none"
+} */
+
+
+#myf {
+  display: none;
+}
+.myFavorites {
+  justify-content: center;
+  column-gap: 1%;
+  padding: 2%;  
+  background-color: blue;
+  width: 100%;
+  display: "none"
+
+}
+
+.myFavorites img {
+  display: flex;
+  width: 25%;
+  height: 100;
 }
 
 .choices {
