@@ -25,7 +25,6 @@ const gameInfo = document.querySelector(".gameInfo");
 const formSearch = document.querySelector("#formSearch");
 const gameFinder = document.querySelector("#gameFinder");
 const myFavorites = document.querySelector(".myFavorites");
-const favoritesArray = []
 const pageLoad = document.querySelector(".onLoad");
 const button2 = document.querySelector("#nextPage");
 const button3 = document.querySelector("#previousPage");
@@ -59,6 +58,7 @@ home.addEventListener("click", () => {
   carousel.style.display = "block";
   dots.style.display = "block";
   gameFinder.value = "";
+  images.style.display = "inline-flex"
 
 })
 
@@ -294,9 +294,14 @@ function showGameData(game) {
   gamePhoto.setAttribute("class", "imgFlex")
 
   const gameTitle = document.createElement("h2");
+  const favorite = document.createElement("i");
+  favorite.setAttribute("class", "fa fa-heart");
   gameTitle.innerText = game.name;
   gameResults.appendChild(gameTitle);
   gameTitle.setAttribute("class", "titleGame")
+  // favorite.setAttribute("class", "favorites")
+  gameTitle.appendChild(favorite);
+
 
   //platform forEach loop
   let platformList = document.createElement("ul")
@@ -318,15 +323,15 @@ function showGameData(game) {
   deck.innerText = game.deck;
   gameResults.appendChild(deck);
   deck.setAttribute("class", "row")
-  const learnMore = document.createElement("button")
+  // const learnMore = document.createElement("button")
 
 
 
-  const favorite = document.createElement("button");
-  gameResults.appendChild(favorite);
-  favorite.setAttribute("class", "button1")
-  favorite.setAttribute("id", "heart")
-  favorite.setAttribute("type", "submit")
+  // const favorite = document.createElement("i");
+  // favorite.setAttribute("class", "fa fa-heart");
+  // // favorite.setAttribute("class", "favorites")
+  // gameResults.appendChild(favorite);
+
 
 
 
@@ -375,5 +380,7 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
+
+const favoritesArray = []
 
 

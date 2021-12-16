@@ -295,7 +295,14 @@ row-gap: 25px;
 .titleGame {
   min-width: 15%;
   max-width: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 .row {
   min-width: 25%;
   max-width: 25%;
@@ -388,8 +395,8 @@ ul {
 }
 
 .choices img{
-  max-width: 400px;
-  height: auto;
+  width: 22vw;
+  height: 100%;
 
   
 }
@@ -397,6 +404,7 @@ ul {
 .choices:hover {
  box-shadow: 10px 10px 10px 5px #595959;
  margin: 0 10px;
+ cursor: pointer;
 }
 
 .ourChoices {
