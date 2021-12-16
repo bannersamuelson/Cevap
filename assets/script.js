@@ -89,9 +89,7 @@ button3.addEventListener("click", () => {
   if (page > 1) {
     page -= 1;
     getGame(currentSearchValue);
-  } else {
-    console.log("invalid");
-  }
+  };
 });
 
 async function getGame(name) {
@@ -121,6 +119,14 @@ async function getGame(name) {
     } else {
       button2.style.display = "block";
     }
+
+    if (page === 1) {
+      button3.style.display = "none"
+    } else {
+      button3.style.display = "block";
+    }
+
+
 
   } catch (error) {
     console.log(error);

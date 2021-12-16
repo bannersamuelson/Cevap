@@ -213,12 +213,12 @@ width: 100%;
 
   #nextPage:hover {
 cursor: pointer;
-background: #dfdede;
+font-weight: bold;
   }
 
  #previousPage:hover {
     cursor: pointer;
-    background: #dfdede;
+    font-weight: bold;
 }
 
   
