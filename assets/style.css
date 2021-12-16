@@ -311,11 +311,11 @@ row-gap: 25px;
   cursor: pointer;
 }    
 .fa-heart:active {
-  background-color: blue;
+  color: black;
 }
 
 .fa-heart:focus {
-  backgrond-color: red;
+  background-color: red;
 }
   
   .row {
@@ -372,14 +372,16 @@ ul {
 #myf {
   display: none;
 }
+
+.container {
+  /* display: inline-flex; */
+}
+
 .myFavorites {
-  justify-content: center;
-  column-gap: 1%;
   padding: 2%;  
   background-color: #f2f2f2;
-  width: 100%;
+  /* width: 100%; */
   display: "none"
-
 }
 
 .myFavorites img {

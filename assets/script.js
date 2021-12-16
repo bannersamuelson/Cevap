@@ -311,8 +311,11 @@ function showGameData(game) {
     fav.addEventListener("click", () => {
       gameInfo.style.display = "none";
       images.style.display = "none";
+      carousel.style.display = "none";
+      dots.style.display = "none";
+      ourChoices.style.display = "none";
       myFavorites.style.display = "block";
-      heart.style.color = "#595959"
+
 
     })
   })
