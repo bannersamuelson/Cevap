@@ -38,6 +38,7 @@ const dots = document.querySelector(".dots");
 const home = document.querySelector("#library");
 const images = document.querySelector(".images");
 const ourChoices = document.querySelector(".ourChoices")
+const madden = document.querySelector("#mad22");
 
 
 logo.addEventListener("click", () => {
@@ -79,6 +80,13 @@ hw.addEventListener("click", () => {
   carousel.style.display = "none";
   dots.style.display = "none";
 })
+
+mad22.addEventListener("click", () => {
+  madden22();
+  carousel.style.display = "none";
+  dots.style.display = "none";
+})
+
 
 
 
@@ -187,7 +195,7 @@ function horizon() {
   button3.style.display = "flex";
 };
 
-function madden220() {
+function madden22() {
   gameFinder.value = "madden 22";
   console.log(gameFinder.value);
   getGame(gameFinder.value);
