@@ -407,9 +407,26 @@ ul {
 .choices img{
   width: 22vw;
   height: 100%;
-
-  
 }
+
+@media only screen and (max-width: 900px){
+  .images{
+    width: 100%;
+    flex-direction: column;
+  }
+  .choices img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  #navId{
+    flex-wrap: wrap;
+    padding-top: 20px;
+    justify-content: center;
+  }
+
 
 .choices:hover {
  box-shadow: 10px 10px 10px 5px #595959;
