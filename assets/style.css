@@ -374,20 +374,24 @@ ul {
 }
 
 .container {
-  /* display: inline-flex; */
+  width: 100%;
 }
 
 .myFavorites {
   padding: 2%;  
   background-color: #f2f2f2;
-  /* width: 100%; */
-  display: "none"
+  display: flex;
+  justify-content: center;
+  background-color: #b1b1b1;
+  width: 100%;
+
 }
 
 .myFavorites img {
-  display: flex;
-  width: 25%;
-  height: 100;
+ padding: 5px;
+ margin: auto;
+  height: 300px;
+  width: auto;
 }
 
 .choices {
