@@ -74,6 +74,7 @@ let currentSearchValue = "";
 button2.addEventListener("click", () => {
   page += 1;
   getGame(currentSearchValue)
+  button2.style.background = grey;
 })
 
 button3.addEventListener("click", () => {

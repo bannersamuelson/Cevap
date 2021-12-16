@@ -23,7 +23,7 @@
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 75px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -174,27 +174,36 @@ width: 100%;
   border-bottom: 1px solid #595959;
 }
 
+.center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
 #nextPage, #previousPage {
   display:none;
-    background-color: #595959; /* Green */
+    background-color: #f9f9f8; /* Green */
     border: none;
-    color: white;
-    padding: 15px 15px;
+    color: #595959;
+    padding:20px 50px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 25px;
     position: relative;
-    margin: 0 50% ;
+    margin-top: 30px;
+    
   }
 
   #nextPage:hover {
 cursor: pointer;
+background: #dfdede;
   }
 
  #previousPage:hover {
     cursor: pointer;
-      }
+    background: #dfdede;
+}
+
+  
 
 .gameResults {
   display: none;
