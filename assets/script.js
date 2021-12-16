@@ -42,6 +42,7 @@ logo.addEventListener("click", () => {
   gameInfo.style.display = "none";
   carousel.style.display = "block";
   dots.style.display = "block";
+  gameFinder.value = "";
 
 })
 
@@ -50,6 +51,7 @@ cod.addEventListener("click", () => {
   callOfDuty();
   carousel.style.display = "none";
   dots.style.display = "none";
+  gameFinder.value = "";
 
 })
 
@@ -57,6 +59,7 @@ bf.addEventListener("click", () => {
   battleField()
   carousel.style.display = "none";
   dots.style.display = "none";
+  gameFinder.value = "";
 });
 
 hw.addEventListener("click", () => {
@@ -143,7 +146,7 @@ function battleField() {
   gameInfo.style.display = "block";
   button2.style.display = "block";
   button3.style.display = "block";
-  gameFinder.innerText = "";
+
 };
 
 function horizon() {
@@ -152,8 +155,8 @@ function horizon() {
   getGame(gameFinder.value);
   removeGame();
   gameInfo.style.display = "block";
-  button2.style.display = "block";
-  button3.style.display = "block";
+  button2.style.display = "flex";
+  button3.style.display = "flex";
 };
 
 
