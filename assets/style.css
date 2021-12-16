@@ -213,7 +213,9 @@ background: #dfdede;
   display: none;
 }
 
- 
+.plat {
+  font-size: 12px;
+} 
 
 .navBar a.active {
   background-color: #595959;
@@ -277,7 +279,6 @@ row-gap: 25px;
 .row {
   min-width: 25%;
   max-width: 25%;
-  display: flex;
 }
 
 .imgFlex {
@@ -287,8 +288,8 @@ row-gap: 25px;
 
 ul {
   list-style-type: none;
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
 }
 
 
