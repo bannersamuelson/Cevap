@@ -325,7 +325,6 @@ function showGameData(game) {
       fav.style.borderBottom = "solid 1px #d5d5d5"
       fav.style.borderMargin = "margin: 0 20px 10px 20px;"
       home.style.borderBottom = "none";
-      footer.style.positon = "0px";
 
 
 

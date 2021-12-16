@@ -426,7 +426,7 @@ ul {
     padding-top: 20px;
     justify-content: center;
   }
-
+}
 
 .choices:hover {
  box-shadow: 10px 10px 10px 5px #595959;
@@ -453,6 +453,5 @@ ul {
   bottom: 0;
   height:100px;
   position: relative; 
- 
 
 }
