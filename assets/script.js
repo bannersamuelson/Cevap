@@ -36,9 +36,18 @@ const bf = document.querySelector("#bf")
 const hw = document.querySelector("#hw")
 const carousel = document.querySelector(".carousel")
 const dots = document.querySelector(".dots");
+const home = document.querySelector("#library")
 
 
 logo.addEventListener("click", () => {
+  gameInfo.style.display = "none";
+  carousel.style.display = "block";
+  dots.style.display = "block";
+  gameFinder.value = "";
+
+})
+
+home.addEventListener("click", () => {
   gameInfo.style.display = "none";
   carousel.style.display = "block";
   dots.style.display = "block";
@@ -73,8 +82,7 @@ let currentSearchValue = "";
 
 button2.addEventListener("click", () => {
   page += 1;
-  getGame(currentSearchValue)
-  button2.style.background = grey;
+  getGame(currentSearchValue);
 })
 
 button3.addEventListener("click", () => {

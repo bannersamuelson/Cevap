@@ -134,12 +134,25 @@ width: 100%;
 }
 /* NAV BAR */
 #library {
-  padding: 50px;
+  padding: 5px;
+}
+#library:hover {
+  cursor: pointer;
+  border-bottom: solid 1px #595959;
+  margin: 0 0 10px 0;
 }
 
 #favorites {
-  padding: 50px 20px;
+  padding: 5px;
+  margin: 0 20px;
 }
+
+#favorites:hover {
+  cursor: pointer;
+  border-bottom: solid 1px #595959;
+  margin: 0 20px 10px 20px;
+}
+
 .navBar {
   height: 10vh;
   display: flex;
