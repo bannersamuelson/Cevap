@@ -163,7 +163,7 @@ async function getGame(name) {
 
   try {
     // const url = `http://www.giantbomb.com/api/search/?api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
-    const url = `http://www.giantbomb.com/api/search/?page=${page}&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
+    const url = `https://www.giantbomb.com/api/search/?page=${page}&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
     let res = await axios.get(url);
 
     const gameData = res.data.results;
@@ -312,6 +312,8 @@ function showGameData(game) {
       gameInfo.style.display = "none";
       images.style.display = "none";
       myFavorites.style.display = "block";
+      heart.style.color = "#595959"
+
     })
   })
   // favorite.setAttribute("class", "favorites")

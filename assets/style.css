@@ -309,11 +309,16 @@ row-gap: 25px;
 .fa-heart:hover {
   color: #595959;
   cursor: pointer;
+}    
+.fa-heart:active {
+  background-color: blue;
 }
 
-
-
-.row {
+.fa-heart:focus {
+  backgrond-color: red;
+}
+  
+  .row {
   min-width: 25%;
   max-width: 25%;
 }
@@ -371,7 +376,7 @@ ul {
   justify-content: center;
   column-gap: 1%;
   padding: 2%;  
-  background-color: blue;
+  background-color: #f2f2f2;
   width: 100%;
   display: "none"
 
