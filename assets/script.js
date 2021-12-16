@@ -26,7 +26,6 @@ const formSearch = document.querySelector("#formSearch");
 const gameFinder = document.querySelector("#gameFinder");
 const myFavorites = document.querySelector(".myFavorites");
 const favoritesArray = []
-const logoImg = document.querySelector(".logo");
 const pageLoad = document.querySelector(".onLoad");
 const button2 = document.querySelector("#nextPage");
 const button3 = document.querySelector("#previousPage");
@@ -38,6 +37,7 @@ const carousel = document.querySelector(".carousel");
 const dots = document.querySelector(".dots");
 const home = document.querySelector("#library");
 const images = document.querySelector(".images");
+const ourChoices = document.querySelector(".ourChoices")
 
 
 logo.addEventListener("click", () => {
@@ -45,6 +45,8 @@ logo.addEventListener("click", () => {
   carousel.style.display = "block";
   dots.style.display = "block";
   gameFinder.value = "";
+  images.style.display = "flex";
+  ourChoices.style.display = "block";
 
 })
 
@@ -77,6 +79,10 @@ hw.addEventListener("click", () => {
   carousel.style.display = "none";
   dots.style.display = "none";
 })
+
+
+
+
 
 let page = 1;
 let currentSearchValue = "";
@@ -126,6 +132,10 @@ async function getGame(name) {
     } else {
       button3.style.display = "block";
     }
+
+    images.style.display = "none";
+    ourChoices.style.display = "none";
+
   } catch (error) {
     console.log(error);
   }
@@ -176,6 +186,47 @@ function horizon() {
   button2.style.display = "flex";
   button3.style.display = "flex";
 };
+
+function madden220() {
+  gameFinder.value = "madden 22";
+  console.log(gameFinder.value);
+  getGame(gameFinder.value);
+  removeGame();
+  gameInfo.style.display = "block";
+  button2.style.display = "flex";
+  button3.style.display = "flex";
+};
+
+function farCry6() {
+  gameFinder.value = "far cry 6";
+  console.log(gameFinder.value);
+  getGame(gameFinder.value);
+  removeGame();
+  gameInfo.style.display = "block";
+  button2.style.display = "flex";
+  button3.style.display = "flex";
+};
+
+function haloinfin() {
+  gameFinder.value = "Halo infinite";
+  console.log(gameFinder.value);
+  getGame(gameFinder.value);
+  removeGame();
+  gameInfo.style.display = "block";
+  button2.style.display = "flex";
+  button3.style.display = "flex";
+};
+
+function spiderman() {
+  gameFinder.value = "Marvel's Spider-Man: Miles Morales";
+  console.log(gameFinder.value);
+  getGame(gameFinder.value);
+  removeGame();
+  gameInfo.style.display = "block";
+  button2.style.display = "flex";
+  button3.style.display = "flex";
+}
+
 
 
 // getGame("fifa")
@@ -242,34 +293,7 @@ function saveGame(gameData) {
 
 }
 
-function choicesPopulate() {
-  const madden = document.createElement("img");
-  madden.src = "https://icdn.digitaltrends.com/image/digitaltrends/tom-brady-and-patrick-mahomes-on-the-cover-of-madden-22.jpg"
-  madden.alt = "madden 22 cover art"
-  images.appendChild(madden)
-  madden.setAttribute("class", "choices")
 
-  const halo = document.createElement("img");
-  halo.src = "https://www.gamespot.com/a/uploads/original/1640/16407182/3913531-haloinfinite.jpg"
-  halo.alt = "halo cover art"
-  images.appendChild(halo)
-  halo.setAttribute("class", "choices")
-
-  const farCry = document.createElement("img");
-  farCry.src = "https://i.ytimg.com/vi/qjSM3Lp7EhI/maxresdefault.jpg"
-  farCry.alt = "farCry cover art"
-  images.appendChild(farCry)
-  farCry.setAttribute("class", "choices")
-
-
-  const sm = document.createElement("img");
-  sm.src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spiderman-1604616315.jpg"
-  images.appendChild(sm)
-  sm.setAttribute("class", "choices")
-
-}
-
-choicesPopulate("madden 22")
 
 
 
