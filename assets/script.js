@@ -41,6 +41,9 @@ const madden = document.querySelector("#mad22");
 const farCry = document.querySelector("#far6");
 const halo = document.querySelector("#haloi");
 const spiderman = document.querySelector("#smm");
+const heart = document.querySelector(".fa-heart")
+const fav = document.querySelector("#favorites")
+const myFav = document.querySelector("#heart")
 
 
 logo.addEventListener("click", () => {
@@ -50,6 +53,7 @@ logo.addEventListener("click", () => {
   gameFinder.value = "";
   images.style.display = "flex";
   ourChoices.style.display = "block";
+  myFavorites.style.display = "none";
 
 })
 
@@ -58,8 +62,8 @@ home.addEventListener("click", () => {
   carousel.style.display = "block";
   dots.style.display = "block";
   gameFinder.value = "";
-  images.style.display = "inline-flex"
-
+  images.style.display = "inline-flex";
+  myFavorites.style.display = "none";
 })
 
 // carousel image click functions
@@ -294,14 +298,30 @@ function showGameData(game) {
   gamePhoto.setAttribute("class", "imgFlex")
 
   const gameTitle = document.createElement("h2");
-  const favorite = document.createElement("i");
-  favorite.setAttribute("class", "fa fa-heart");
   gameTitle.innerText = game.name;
   gameResults.appendChild(gameTitle);
   gameTitle.setAttribute("class", "titleGame")
+  gameTitle.addEventListener("click", () => {
+    const gameImage = document.createElement("img")
+    gameImage.src = game.image.medium_url;
+    myFavorites.appendChild(gameImage);
+    myFavorites.style.display = "none ";
+    console.log(gameImage);
+    myFavorites.appendChild(gameImage);
+    fav.addEventListener("click", () => {
+      gameInfo.style.display = "none";
+      images.style.display = "none";
+      myFavorites.style.display = "block";
+    })
+  })
   // favorite.setAttribute("class", "favorites")
-  gameTitle.appendChild(favorite);
 
+
+
+  const favorite = document.createElement("i");
+  favorite.setAttribute("class", "fa fa-heart");
+  favorite.setAttribute("id", "heart");
+  gameTitle.appendChild(favorite);
 
   //platform forEach loop
   let platformList = document.createElement("ul")
@@ -326,15 +346,6 @@ function showGameData(game) {
   // const learnMore = document.createElement("button")
 
 
-
-  // const favorite = document.createElement("i");
-  // favorite.setAttribute("class", "fa fa-heart");
-  // // favorite.setAttribute("class", "favorites")
-  // gameResults.appendChild(favorite);
-
-
-
-
 };
 
 function showGamedata(data) {
@@ -343,7 +354,6 @@ function showGamedata(data) {
 
 function saveGame(gameData) {
   favoritesArray.push(gameData.game)
-
 }
 
 
@@ -379,8 +389,3 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-
-
-const favoritesArray = []
-
-

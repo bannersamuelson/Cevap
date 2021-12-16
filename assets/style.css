@@ -296,12 +296,23 @@ row-gap: 25px;
   min-width: 15%;
   max-width: 15%;
   display: flex;
-  flex-wrap: wrap;
   align-content: center;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
 }
+
+.fa-heart {
+  color: #b1b1b1;
+  background-color: #f9f9f9;
+  border: none;
+}
+
+.fa-heart:hover {
+  color: #595959;
+  cursor: pointer;
+}
+
+
 
 .row {
   min-width: 25%;
@@ -325,49 +336,6 @@ ul {
   width: 5%;
 }
 
- /*---------------------------------- 
-        MAKING HEART BUTTON
- ----------------------------------  */
-#heart {
-  background-color: #dfdfdf;
-  display: inline-block;
-  height: 15px;
-  position: relative;
-  top: 0;
-  transform: rotate(-45deg);
-  width: 15px;
-}
-
-#heart:before,
-#heart:after {
-  content: "";
-  background-color: #dfdfdf;
-  border-radius: 50%;
-  height: 15px;
-  position: absolute;
-  width: 15px;
-}
-
-#heart:before {
-  top: -10px;
-  left: 0;
-}
-
-#heart:after {
-  left: 10px;
-  top: 0;
-}
-
-#heart:hover {
-  background-color: #595959;
-  cursor: pointer;
-}
-
-#heart:hover::before,
-#heart:hover::after{
-  background-color: #595959;
-}
-
 /* ON PAGE LOAD style */
 .onLoad {
   display: flex;
@@ -379,6 +347,9 @@ ul {
   height:auto;
   width: 25%;
 }
+
+/* .myFavorites {
+  /* display: "block" */
 
 .images {
   display: inline-flex;
