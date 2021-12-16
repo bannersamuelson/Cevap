@@ -89,15 +89,44 @@ deck: "Various football players are already duking it out for the rights to be n
 | Debugging | M | 3 hours | 3 hrs | 3 hrs |
 | Total | H | 33.5 hours | 43.5 hrs | 43.5 hrs |
 
-<!-- ## Code Snippet
+<!-- CODE SNIPPET I'M PROUD OF -->
+```
+function showGameData(game) {
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.   -->
+  const gamePhoto = document.createElement("img")
+  gamePhoto.src = game.image.medium_url;
+  gamePhoto.alt = `Post of ${game.name}`;
+  gameResults.appendChild(gamePhoto);
+  gamePhoto.setAttribute("class", "imgFlex")
 
-<!-- ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-``` -->
+  const gameTitle = document.createElement("h2");
+  gameTitle.innerText = game.name;
+  gameResults.appendChild(gameTitle);
+  gameTitle.setAttribute("class", "titleGame")
+  gameTitle.addEventListener("click", () => {
+    const gameImage = document.createElement("img")
+    gameImage.src = game.image.medium_url;
+    myFavorites.appendChild(gameImage);
+    myFavorites.style.display = "none ";
+    console.log(gameImage);
+    myFavorites.appendChild(gameImage);
+    fav.addEventListener("click", () => {
+      gameInfo.style.display = "none";
+      images.style.display = "none";
+      carousel.style.display = "none";
+      dots.style.display = "none";
+      ourChoices.style.display = "none";
+      myFavorites.style.display = "block";
+      fav.style.borderBottom = "solid 1px #d5d5d5"
+      fav.style.borderMargin = "margin: 0 20px 10px 20px;"
+      home.style.borderBottom = "none";
+
+
+
+    })
+  })
+  ```
 
 ## Change Log
- <!-- Use this section to document what changes were made and the reasoning behind those changes.   -->
+ <!-- Use this section to document what changes were made and the reasoning behind those changes.   !-->
+I changed the home page from just images of a video game to an actual professional looking, which was mainly done with hard-coding the HTML on the page. I wished I did not have to hard code the HTML, but I'm pleased with the outcome.
