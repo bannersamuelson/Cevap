@@ -73,21 +73,21 @@ deck: "Various football players are already duking it out for the rights to be n
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Working with API | H | 1 hrs|
-| Adding HTML and CSS for stying | L | 2 |
-| Nav bar and flex display | H | 1.5 hours |
-| Search bar input JS | H| 3 hours |
-| Display item information | H | 3 hours |
-| Page scroll functionality | L | 1.5 hours |
-| CSS Styling| M | 2 hours |
-| User feedback display | M | 3 hours |
-| API functionality | H| 3 hours |
-| JavaScript "my library" | M | 3 hours |
-| JavaScript "my favorites" | M | 3 hours |
-| Media Query Styling | H | 3 hours|
-| Background imaging | L | 2 hour |
-| Debugging | M | 3 hours |
-| Total | H | 33.5 hours |
+| Working with API | H | 1 hrs| 3 hrs| 3 hrs|
+| Adding HTML and CSS for stying | L | 2 hrs | 10 hrs | 10 hrs |
+| Nav bar and flex display | H | 1.5 hrs | 5 hrs | 5 hrs|
+| Search bar input JS | H| 3 hrs | 3 hrs | 3 hrs |
+| Display item information | H | 3 hrs | 3 hrs | 3 hrs
+| Page scroll functionality | L | 1.5 hrs | 1.5 hrs | 1.5 hrs |
+| CSS Styling| M | 2 hrs | 2 hrs | 2 hrs |
+| User feedback display | M | 3 hrs | 3 hrs | 3hrs |
+| API functionality | H| 3 hrs | 3 hrs | 3 hrs |
+| JavaScript "my library" | M | 3 hrs | 1.5 hrs | 1.5 hrs |
+| JavaScript "my favorites" | M | 3 hrs | 3 hrs | 3 hrs |
+| Media Query Styling | H | 3 hrs| .5 hrs | .5 hrs
+| Background imaging | L | 2 hrs | 2 hrs | 2 hrs |
+| Debugging | M | 3 hours | 3 hrs | 3 hrs |
+| Total | H | 33.5 hours | 43.5 hrs | 43.5 hrs |
 
 <!-- ## Code Snippet
 
