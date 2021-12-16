@@ -113,7 +113,8 @@ async function getGame(name) {
     console.log(gameData);
     gameData.forEach((game) => {
       showGameData(game);
-
+      carousel.style.display = "none";
+      dots.style.display = "none";
 
     });
 
