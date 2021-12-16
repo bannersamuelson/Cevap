@@ -241,6 +241,9 @@ font-weight: bold;
   color: #f9f9f8;
 }
 
+/*---------------------------------------------
+                  SEARCH BAR 
+-----------------------------------------------*/
 .searchBar {
   align-items: center;
   background: #f9f9f8 none repeat scroll 0 0;
@@ -254,8 +257,6 @@ font-weight: bold;
 
 .searchBar:hover, .searchBar:focus {
   background: #f9f9f8;
- 
-
 }
 
 .searchBar button {
@@ -368,6 +369,21 @@ ul {
 .onLoad img {
   height:auto;
   width: 25%;
+}
+
+
+.images {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.ourChoices {
+  margin-left: 50px;
+}
+.choices {
+  width: 23%;
+  margin: auto;
 }
 
 

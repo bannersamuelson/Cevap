@@ -31,12 +31,13 @@ const pageLoad = document.querySelector(".onLoad");
 const button2 = document.querySelector("#nextPage");
 const button3 = document.querySelector("#previousPage");
 const logo = document.querySelector(".logo");
-const cod = document.querySelector("#cod")
-const bf = document.querySelector("#bf")
-const hw = document.querySelector("#hw")
-const carousel = document.querySelector(".carousel")
+const cod = document.querySelector("#cod");
+const bf = document.querySelector("#bf");
+const hw = document.querySelector("#hw");
+const carousel = document.querySelector(".carousel");
 const dots = document.querySelector(".dots");
-const home = document.querySelector("#library")
+const home = document.querySelector("#library");
+const images = document.querySelector(".images");
 
 
 logo.addEventListener("click", () => {
@@ -125,9 +126,6 @@ async function getGame(name) {
     } else {
       button3.style.display = "block";
     }
-
-
-
   } catch (error) {
     console.log(error);
   }
@@ -239,47 +237,44 @@ function showGamedata(data) {
   console.log(data);
 };
 
-
-
-
-
 function saveGame(gameData) {
   favoritesArray.push(gameData.game)
 
 }
 
+function choicesPopulate() {
+  const madden = document.createElement("img");
+  madden.src = "https://icdn.digitaltrends.com/image/digitaltrends/tom-brady-and-patrick-mahomes-on-the-cover-of-madden-22.jpg"
+  madden.alt = "madden 22 cover art"
+  images.appendChild(madden)
+  madden.setAttribute("class", "choices")
+
+  const halo = document.createElement("img");
+  halo.src = "https://www.gamespot.com/a/uploads/original/1640/16407182/3913531-haloinfinite.jpg"
+  halo.alt = "halo cover art"
+  images.appendChild(halo)
+  halo.setAttribute("class", "choices")
+
+  const farCry = document.createElement("img");
+  farCry.src = "https://i.ytimg.com/vi/qjSM3Lp7EhI/maxresdefault.jpg"
+  farCry.alt = "farCry cover art"
+  images.appendChild(farCry)
+  farCry.setAttribute("class", "choices")
+
+
+  const sm = document.createElement("img");
+  sm.src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spiderman-1604616315.jpg"
+  images.appendChild(sm)
+  sm.setAttribute("class", "choices")
+
+}
+
+choicesPopulate("madden 22")
 
 
 
-// async function onLoad(name) {
-//   {
-//     pageLoad.style.display = "flex";
 
-//     const newUrl = `http://www.giantbomb.com/api/search/?limit=8&page=2&api_key=ea72d6fa698b889389beedfb65fbb5cf921e51da&format=json&query="${name}"&resources=game`;
-//     const newRes = await axios.get(newUrl);
-//     const newGameData = newRes.data.results;
-
-//     console.log(newGameData);
-//     newGameData.forEach((game) => {
-//       randomGameData(game)
-//     });
-//   }
-
-//   function randomGameData(game) {
-
-
-//     const largePhoto = document.createElement("img")
-//     largePhoto.src = game.image.medium_url;
-//     largePhoto.alt = `Post of ${game.name}`;
-//     pageLoad.appendChild(largePhoto);
-
-
-//   }
-// }
-
-// onLoad("madden")
-
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
