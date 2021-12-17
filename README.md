@@ -54,6 +54,7 @@ deck: "Various football players are already duking it out for the rights to be n
 - add heart color after click
 - add carousel to now trending
 - have random games be able to be displayed
+- have full screen pages on game clicked ("show more")
 ## Project Schedule
 
 |  Day | Deliverable | Status
