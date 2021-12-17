@@ -59,12 +59,12 @@ deck: "Various football players are already duking it out for the rights to be n
 |  Day | Deliverable | Status
 |---|---| ---|
 |Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Copmlete
-|Dec 13| Project Approval/ create webppage/phone structure | Incomplete
-|Dec 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Dec 14| Pseudocode / actual codeCore| Incomplete | Incomplete
-|Dec 15| Initial Clickable Model  | Incomplete
-|Dec 16| MVP | Incomplete
-|Dec 17| Presentations | Incomplete
+|Dec 13| Project Approval/ create webppage/phone structure | Complete
+|Dec 13| Core Application Structure (HTML, CSS, etc.) | Complete
+|Dec 14| Pseudocode / actual codeCore| Incomplete | Complete
+|Dec 15| Initial Clickable Model  | Complete
+|Dec 16| MVP | Complete
+|Dec 17| Presentations | Complete
 
 ## Priority Matrix
 
