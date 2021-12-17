@@ -50,10 +50,10 @@ deck: "Various football players are already duking it out for the rights to be n
 
 #### PostMVP  
 
-- Add a hamburger style menu for phone screens
-- Add a carousel for game scrolling
-- Expand game informaiton upon click
-- Add suggestions section
+- update favorites screen
+- add heart color after click
+- add carousel to now trending
+- have random games be able to be displayed
 ## Project Schedule
 
 |  Day | Deliverable | Status
