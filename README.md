@@ -43,9 +43,8 @@ deck: "Various football players are already duking it out for the rights to be n
 
 - Be able to search a database for games
 - A list of games will populate based on the search including title/release date and img
-- add a "learn more function"
 - A "my games" will be added for you to save favorite games
-- A "library" tab will revert back to the previous search
+- A "home" tab will revert back to the home screen / clicking on logo
 - phone screens will be functional.
 
 #### PostMVP  
