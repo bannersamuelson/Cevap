@@ -68,6 +68,7 @@ home.addEventListener("click", () => {
   myFavorites.style.display = "none";
   fav.style.borderBottom = "none";
   home.style.borderBottom = "solid 1px #d5d5d5"
+  ourChoices.style.display = "flex";
 })
 
 // carousel image click functions
